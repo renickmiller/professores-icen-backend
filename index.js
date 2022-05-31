@@ -10,19 +10,19 @@ app.use(express.json());
 //Populando o banco de dados
 
 //Criando a conexão
-const connection = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'renick123456',
-  database: 'googleacademico',
-});
-
 // const connection = mysql.createPool({
-//   host: 'us-cdbr-east-05.cleardb.net',
-//   user: 'bea21cfed3018e',
-//   password: '8a173ef0',
-//   database: 'heroku_82fb86e0357b1ea',
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'renick123456',
+//   database: 'googleacademico',
 // });
+
+const connection = mysql.createPool({
+  host: 'us-cdbr-east-05.cleardb.net',
+  user: 'bea21cfed3018e',
+  password: '8a173ef0',
+  database: 'heroku_82fb86e0357b1ea',
+});
 
 //mysql://bea21cfed3018e:8a173ef0@us-cdbr-east-05.cleardb.net/heroku_82fb86e0357b1ea?reconnect=true
 //heroku
