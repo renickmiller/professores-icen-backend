@@ -6,6 +6,7 @@ const cors = require('cors');
 app.use(cors());
 const router = express.Router();
 app.use(express.json());
+const PORT = process.env.PORT || 8080;
 
 //Populando o banco de dados
 
@@ -47,8 +48,8 @@ function execSQLQuerytwo(sqlQry, res) {
 }
 
 //Inicia o Servidor
-app.listen(8080, () => {
-  console.log('Servidor iniciado na porta 8080: http://localhost:8080');
+app.listen(PORT, () => {
+  console.log('porta: ', PORT);
 });
 
 //Definindo rotas necessárias
