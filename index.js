@@ -102,7 +102,10 @@ var professor = [
 
 //Web Scraping dos dados
 (async () => {
-  const browser = await pup.launch(/*{ headless: false }*/); //false abre o navegador e mostra o processo
+  const browser = await pup.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  }); //false abre o navegador e mostra o processo
   const page = await browser.newPage(); //Cria página
   console.log('INICIEI!');
 
