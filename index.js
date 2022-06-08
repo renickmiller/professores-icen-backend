@@ -100,8 +100,9 @@ var professor = [
   'https://scholar.google.com.br/citations?hl=pt-BR&user=EKScjsUAAAAJ',
 ];
 
-//Web Scraping dos dados
-(async () => {
+//Web Scraping dos dados em um setInterval de 24h
+
+async function ws() {
   const browser = await pup.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -137,4 +138,6 @@ var professor = [
   }
   await page.waitForTimeout(3000);
   await browser.close();
-})();
+}
+
+setInterval(ws, 86400000);
