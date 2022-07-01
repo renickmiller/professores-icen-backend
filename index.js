@@ -140,4 +140,4 @@ async function ws() {
   await browser.close();
 }
 
-setInterval(ws, 86400000);
+ws();
